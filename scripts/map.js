@@ -31,7 +31,7 @@ const map = (rawData) => {
     update(world);
   });
 
-  d3.json('../data/countries-110m.json')
+  d3.json('/data/countries-110m.json')
     .then((rawWorld) => {
       world = rawWorld;
       const mapInfo = d3.map();
