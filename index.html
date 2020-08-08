@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Covid 19 Report</title>
+    <link rel="stylesheet" href="styles/style.css" />
+  </head>
+  <body>
+    <main class="container">
+      <h1>Convid 19 Report</h1>
+    <section class="top-info">
+
+      <div class="total-cases">
+        <input type="radio" name="map-options" calss="map-options" value="TotalConfirmed" id="totalCases" checked>
+        <label for="totalCases">
+          <h5>Total Cases</h5>
+          <span class="value"></span>
+        </label>
+      </div>
+      <div class="total-recovered">
+        <input type="radio" name="map-options" calss="map-options" value="TotalRecovered" id="totalRecovered">
+        <label for="totalRecovered">
+          <h5>Total Recovered</h5>
+          <span class="value"></span>
+        </label>
+      </div>
+      <div class="total-deaths">
+        <input type="radio" name="map-options" calss="map-options" value="TotalDeaths" id="totalDeaths">
+        <label for="totalDeaths">
+          <h5>Total Deaths</h5>
+          <span class="value"></span>
+        </label>
+      </div>
+    </section>
+    
+    </main>
+    <script src="https://d3js.org/d3.v5.min.js"></script>
+    <script src="https://unpkg.com/topojson@3"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-legend/2.25.6/d3-legend.min.js"></script>
+    <script src="scripts/script.js"></script>
+    <script src="scripts/map.js"></script>
+  </body>
+</html>
