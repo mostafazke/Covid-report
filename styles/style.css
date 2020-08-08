@@ -46,3 +46,9 @@
 .map {
   /* border: 1px solid #ccc; */
 }
+
+.source-copyright {
+  text-align: center;
+  width: 900px;
+  margin: 0 auto;
+}
