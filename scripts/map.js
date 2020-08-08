@@ -79,7 +79,6 @@ const map = (rawData) => {
         .attr('class', 'legend')
         .attr('transform', `translate(40, ${height / 2})`)
         .call(legend);
-
     })
     .catch(console.error);
 
@@ -88,7 +87,6 @@ const map = (rawData) => {
     for (let i = 0; i < data.Countries.length; i++) {
       mapInfo.set(data.Countries[i].CountryCode, data.Countries[i][dataType]);
     }
-
     switch (dataType) {
       case 'TotalRecovered':
         colorScale.domain([1000, 10000, 50000, 100000, 500000, 1000000]);
@@ -100,8 +98,10 @@ const map = (rawData) => {
         colorScale.domain([1000, 10000, 50000, 100000, 500000, 1000000]);
         break;
     }
+    const t = d3.transition().duration(750).ease(d3.easePolyInOut);
     d3.select('.countries')
       .selectAll('path')
+      .transition(t)
       .attr('fill', function (d) {
         d.total = mapInfo.get(d.properties.alpha2) || 0;
         return colorScale(d.total);
